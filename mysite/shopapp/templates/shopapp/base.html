@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            Title
+        {% endblock %}
+    </title>
+</head>
+<body>
+{% block body %}
+    Body
+<div>
+    {% now 'H:i' %}
+    {%now 'l' as current_weekday%}
+    Today is {{ current_weekday }}
+</div>
+{% endblock %}
+</body>
+</html>
