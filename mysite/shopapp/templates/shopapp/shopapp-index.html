@@ -6,15 +6,7 @@
 {% block body %}
   <h1>Shop App</h1>
   <div>
-    {%if products %}
-      Available number of products : {{ products|length }}
-    {% endif %}
-    <ul>
-      {%for name, price in products %}
-        <li>{{ name|capfirst }} for {{ price|add:"2" }}$</li>
-      {% empty %}
-        <li>Sorry, no products</li>
-      {% endfor %}
-    </ul>
+    <a href="products">Products</a>
+    <a href="orders">Orders</a>
   </div>
 {% endblock %}
