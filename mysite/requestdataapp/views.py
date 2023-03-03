@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.core.files.storage import FileSystemStorage
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
@@ -25,7 +26,10 @@ def user_form(request: HttpRequest) -> HttpResponse:
 def handle_file_upload(request: HttpRequest) -> HttpResponse:
     if request.method == 'POST' and request.FILES.get('myfile'):
         myfile = request.FILES['myfile']
-        fs = FileSystemStorage()
-        filename = fs.save(myfile.name, myfile)
-        print('saved', filename)
+        if myfile.size > 10**6:
+            raise ValidationError('Size is more than 1MB', code='size')
+        else:
+            fs = FileSystemStorage()
+            filename = fs.save(myfile.name, myfile)
+            print('saved', filename)
     return render(request, 'requestdataapp/file-upload.html')

@@ -1,16 +1,25 @@
+import time
+
 from django.http import HttpRequest
+
+ip_dict = dict()
 
 
 def set_useragent_on_request_middleware(get_response):
     print('inital call')
 
     def middleware(request: HttpRequest):
-        print('before get response')
-        request.user_agent = request.META['HTTP_USER_AGENT']
+        call_time = time.time()
+        address = request.META.get('REMOTE_ADDR')
+        if address in ip_dict:
+            diff = call_time - ip_dict[address]
+            if diff <= 2:
+                raise Exception('Too many request.')
+            ip_dict[address] = call_time
+        else:
+            ip_dict[address] = call_time
         response = get_response(request)
-        print('after get response')
         return response
-
     return middleware
 
 
