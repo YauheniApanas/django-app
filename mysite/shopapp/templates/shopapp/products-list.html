@@ -10,7 +10,7 @@
         {%for product in products %}
             <div>
                 <ul>
-                    <li>Name: {{ product.name }}</li>
+                    <li><a href="{% url 'shopapp:product_details' pk=product.pk %}">Name: {{ product.name }}</a></li>
                     <li>Price: {{ product.price }}</li>
                     <li>Discount: {% firstof product.discount 'No discount' %}</li>
                 </ul>

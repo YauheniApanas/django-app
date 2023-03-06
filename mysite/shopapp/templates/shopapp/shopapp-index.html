@@ -6,7 +6,7 @@
 {% block body %}
   <h1>Shop App</h1>
   <div>
-    <a href="products">Products</a>
-    <a href="orders">Orders</a>
+    <a href="{% url 'shopapp:products' %}">Products</a>
+    <a href="{% url 'shopapp:orders' %}">Orders</a>
   </div>
 {% endblock %}

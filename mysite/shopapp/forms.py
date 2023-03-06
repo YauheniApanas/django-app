@@ -1,7 +1,13 @@
 from django import forms
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 
 from .models import Product, Order
+
+
+class GroupForm(forms.ModelForm):
+    class Meta:
+        model = Group
+        fields = ['name']
 
 
 class ProductForm(forms.ModelForm):
@@ -17,8 +23,8 @@ class OrderForm(forms.ModelForm):
 
     class Meta:
         model = Order
-        fields = 'delivery_address', 'promocode', 'products'
+        fields = 'delivery_address', 'promocode', 'products', 'user'
     products = CustomMMCF(
-        queryset=Product.objects.all(),
+        queryset=Product.objects.filter(archived=False).all(),
         widget=forms.CheckboxSelectMultiple,
     )
