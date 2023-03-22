@@ -4,6 +4,7 @@ from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 
 from shopapp.models import Product, Order
 from .forms import ProductForm, OrderForm, GroupForm
@@ -49,13 +50,23 @@ class ProductListView(ListView):
     context_object_name = 'products'
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(PermissionRequiredMixin, CreateView):
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.created_by = self.request.user
+        return super().form_valid(form)
+
+    permission_required = 'shopapp.add_product'
     model = Product
     fields = 'name', 'price', 'description', 'discount'
     success_url = reverse_lazy('shopapp:products')
 
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(UserPassesTestMixin, PermissionRequiredMixin, UpdateView):
+    permission_required = 'shopapp.change_product'
+
+    def test_func(self):
+        return self.request.user.is_superuser or self.request.user == self.get_object().created_by
     model = Product
     fields = 'name', 'price', 'description', 'discount'
     template_name_suffix = '_update_form'
@@ -76,13 +87,14 @@ class ProductDeleteView(DeleteView):
         return HttpResponseRedirect(success_url)
 
 
-class OrdersListView(ListView):
+class OrdersListView(LoginRequiredMixin, ListView):
     queryset = Order.objects.\
         select_related('user').\
         prefetch_related('products')
 
 
-class OrderDetailView(DetailView):
+class OrderDetailView(PermissionRequiredMixin, DetailView):
+    permission_required = 'shopapp.view_order'
     queryset = Order.objects.\
         select_related('user').\
         prefetch_related('products')
