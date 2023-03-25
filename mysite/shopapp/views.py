@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -50,13 +50,13 @@ class ProductListView(ListView):
     context_object_name = 'products'
 
 
-class ProductCreateView(PermissionRequiredMixin, CreateView):
+class ProductCreateView(CreateView):
     def form_valid(self, form):
         self.object = form.save(commit=False)
         self.object.created_by = self.request.user
         return super().form_valid(form)
 
-    permission_required = 'shopapp.add_product'
+    # permission_required = 'shopapp.add_product'
     model = Product
     fields = 'name', 'price', 'description', 'discount'
     success_url = reverse_lazy('shopapp:products')
@@ -119,3 +119,37 @@ class OrderUpdateView(UpdateView):
 class OrderDeleteView(DeleteView):
     model = Order
     success_url = reverse_lazy('shopapp:orders')
+
+
+class ProductsDataExportView(View):
+    def get(self, request: HttpRequest) -> JsonResponse:
+        products = Product.objects.order_by('pk').all()
+        products_data = [
+            {
+                'pk': product.pk,
+                'name': product.name,
+                'price': product.price,
+                'archived': product.archived,
+            }
+            for product in products
+        ]
+        return JsonResponse({'products': products_data})
+
+
+class OrdersDataExportView(UserPassesTestMixin, View):
+    def test_func(self):
+        return self.request.user.is_staff
+
+    def get(self, request: HttpRequest) -> JsonResponse:
+        orders = Order.objects.all()
+        orders_data = [
+            {
+                'pk': order.pk,
+                'delivery_address': order.delivery_address,
+                'promocode': order.promocode,
+                'products': order.products,
+                'user': order.user,
+            }
+            for order in orders
+        ]
+        return JsonResponse({'orders': orders_data})
