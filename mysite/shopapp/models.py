@@ -9,7 +9,7 @@ class Product(models.Model):
     discount = models.PositiveSmallIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     archived = models.BooleanField(default=False)
-    created_by = models.ForeignKey(User, on_delete=models.PROTECT)
+    created_by = models.ForeignKey(User, default=None, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self) -> str:
         return f'Product(pk={self.pk}, name={self.name!r})'
@@ -19,5 +19,5 @@ class Order(models.Model):
     delivery_address = models.TextField(null=False, blank=True)
     promocode = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
-    user = models.ForeignKey(User, on_delete=models.PROTECT)
+    user = models.ForeignKey(User, default=None, on_delete=models.CASCADE, blank=True, null=True)
     products = models.ManyToManyField(Product, related_name='orders')

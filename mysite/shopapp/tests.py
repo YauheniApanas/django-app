@@ -60,7 +60,9 @@ class ProductDetailsViewTestCase(TestCase):
 
 class ProductsListViewTestCase(TestCase):
     fixtures = [
-        'products-fixture.json',
+        'product-fixture.json',
+        'user-fixture.json',
+        'group-fixture.json',
     ]
 
     def test_products(self):
@@ -69,6 +71,7 @@ class ProductsListViewTestCase(TestCase):
             qs=Product.objects.filter(archived=False).all(),
             values=(p.pk for p in response.context['products']),
             transform=lambda p: p.pk,
+            ordered=False,
         )
         self.assertTemplateUsed(response, 'shopapp/products-list.html')
 
@@ -99,13 +102,26 @@ class OrdersListViewTestCase(TestCase):
 
 class ProductsExportViewTestCase(TestCase):
     fixtures = [
-        'products-fixture.json',
+        'product-fixture.json',
+        'user-fixture.json',
+        'group-fixture.json',
     ]
+
+    @classmethod
+    def setUpClass(cls):
+        cls.user = User.objects.create_user(username='test', password='qwerty', is_staff=True)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.user.delete()
+
+    def setUp(self) -> None:
+        self.client.force_login(self.user)
 
     def test_get_products_view(self):
         response = self.client.get(reverse('shopapp:products_export'))
         self.assertEqual(response.status_code, 200)
-        products = Product.object.order_by('pk').all()
+        products = Product.objects.order_by('pk').all()
         expected_data = [
             {
                 'pk': product.pk,
@@ -147,9 +163,9 @@ class OrderDetailViewTestCase(TestCase):
 
 class OrdersExportTestCase(TestCase):
     fixtures = [
-        'products-fixture.json',
-        'orders-fixture.json',
-        'users-fixture.json',
+        'product-fixture.json',
+        'order-fixture.json',
+        'user-fixture.json',
     ]
 
     @classmethod
