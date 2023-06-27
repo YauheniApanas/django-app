@@ -1,13 +1,16 @@
 [
 {
     "model": "shopapp.order",
-    "pk": 2,
+    "pk": 3,
     "fields": {
-        "delivery_address": "Repina 39",
-        "promocode": "SALE",
-        "created_at": "2023-02-24T11:39:41.863Z",
+        "delivery_address": "Pushkina, 29",
+        "promocode": "123",
+        "created_at": "2023-06-27T14:04:07.201Z",
         "user": 1,
-        "products": []
+        "receipt": "",
+        "products": [
+            10
+        ]
     }
 }
 ]

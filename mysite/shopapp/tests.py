@@ -38,6 +38,7 @@ class ProductCreateViewTestCase(TestCase):
 class ProductDetailsViewTestCase(TestCase):
     @classmethod
     def setUpClass(cls):
+        super(ProductDetailsViewTestCase, cls).setUpClass()
         user = User.objects.create(username='admin')
         cls.product = Product.objects.create(name='best product', created_by=user)
 
@@ -80,6 +81,7 @@ class OrdersListViewTestCase(TestCase):
 
     @classmethod
     def setUpClass(cls):
+        super(OrdersListViewTestCase, cls).setUpClass()
         cls.user = User.objects.create_user(username='test', password='qwerty')
 
     @classmethod
@@ -109,6 +111,7 @@ class ProductsExportViewTestCase(TestCase):
 
     @classmethod
     def setUpClass(cls):
+        super(ProductsExportViewTestCase, cls).setUpClass()
         cls.user = User.objects.create_user(username='test', password='qwerty', is_staff=True)
 
     @classmethod
@@ -126,7 +129,7 @@ class ProductsExportViewTestCase(TestCase):
             {
                 'pk': product.pk,
                 'name': product.name,
-                'price': product.price,
+                'price': str(product.price),
                 'archived': product.archived,
             }
             for product in products
@@ -143,6 +146,7 @@ class OrderDetailViewTestCase(TestCase):
 
     @classmethod
     def setUpClass(cls):
+        super(OrderDetailViewTestCase, cls).setUpClass()
         cls.user = User.objects.create_user(username='test', password='qwerty')
         cls.user.user_permissions.add(Permission.objects.get(codename='view_order'))
         cls.order = Order.objects.create(delivery_address='Pushkina', promocode='sale', user=cls.user)
@@ -166,10 +170,12 @@ class OrdersExportTestCase(TestCase):
         'product-fixture.json',
         'order-fixture.json',
         'user-fixture.json',
+        'group-fixture.json'
     ]
 
     @classmethod
     def setUpClass(cls):
+        super(OrdersExportTestCase, cls).setUpClass()
         cls.user = User.objects.create_user(username='test', password='qwerty', is_staff=True)
 
     @classmethod
@@ -181,14 +187,14 @@ class OrdersExportTestCase(TestCase):
 
     def test_orders_export_view(self):
         response = self.client.get(reverse('shopapp:orders_export'))
-        orders = Order.objects.all()
+        orders = Order.objects.order_by('pk').all()
         expected_data = [
             {
                 'pk': order.pk,
                 'delivery_address': order.delivery_address,
                 'promocode': order.promocode,
-                'products': order.products,
-                'user': order.user,
+                'products': [item.pk for item in order.products.all()],
+                'user': order.user.pk,
             }
             for order in orders
         ]

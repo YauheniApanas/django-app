@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User, Group
+from django.core import serializers
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse
 from django.urls import reverse_lazy
@@ -6,7 +7,7 @@ from django.views import View
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 
-from shopapp.models import Product, Order
+from shopapp.models import Product, Order, ProductImage
 from .forms import ProductForm, OrderForm, GroupForm
 
 
@@ -40,7 +41,7 @@ class GroupListView(View):
 
 class ProductDetailsView(DetailView):
     template_name = 'shopapp/product-details.html'
-    model = Product
+    queryset = Product.objects.prefetch_related('images')
     context_object_name = 'product'
 
 
@@ -58,7 +59,7 @@ class ProductCreateView(CreateView):
 
     # permission_required = 'shopapp.add_product'
     model = Product
-    fields = 'name', 'price', 'description', 'discount'
+    fields = 'name', 'price', 'description', 'discount', 'preview'
     success_url = reverse_lazy('shopapp:products')
 
 
@@ -68,12 +69,22 @@ class ProductUpdateView(UserPassesTestMixin, PermissionRequiredMixin, UpdateView
     def test_func(self):
         return self.request.user.is_superuser or self.request.user == self.get_object().created_by
     model = Product
-    fields = 'name', 'price', 'description', 'discount'
+    # fields = 'name', 'price', 'description', 'discount', 'preview'
     template_name_suffix = '_update_form'
     success_url = reverse_lazy()
+    form_class = ProductForm
 
     def get_success_url(self):
         return reverse('shopapp:product_details', kwargs={'pk': self.object.pk})
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        for image in form.files.getlist('images'):
+            ProductImage.objects.create(
+                product=self.object,
+                image=image
+            )
+        return response
 
 
 class ProductDeleteView(DeleteView):
@@ -141,15 +152,16 @@ class OrdersDataExportView(UserPassesTestMixin, View):
         return self.request.user.is_staff
 
     def get(self, request: HttpRequest) -> JsonResponse:
-        orders = Order.objects.all()
+        orders = Order.objects.order_by('pk').all()
         orders_data = [
             {
                 'pk': order.pk,
                 'delivery_address': order.delivery_address,
                 'promocode': order.promocode,
-                'products': order.products,
-                'user': order.user,
+                'products': [item.pk for item in order.products.all()],
+                'user': order.user.pk,
             }
             for order in orders
         ]
+        print(orders_data)
         return JsonResponse({'orders': orders_data})
