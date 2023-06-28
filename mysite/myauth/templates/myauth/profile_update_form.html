@@ -1,21 +1,21 @@
-{% extends 'shopapp/base.html' %}
+{% extends 'myauth/base.html' %}
 
 {% block title %}
-  Create product
+  Update profile
 {% endblock %}
 
 {% block body %}
-<h1>Create new product</h1>
+<h1>Update profile</h1>
 <div>
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">
-      Create
+      Update
     </button>
   </form>
 </div>
 <div>
-  <a href="{% url 'shopapp:products' %}">Back to products list</a>
+  <a href="{% url 'myauth:about-me' %}">Back to profile</a>
 </div>
 {% endblock %}

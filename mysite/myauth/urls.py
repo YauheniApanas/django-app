@@ -9,7 +9,7 @@ from .views import (
     MyLogoutView,
     AboutMeView,
     RegisterView,
-    FooBarView,
+    FooBarView, ProfileUpdateView, ProfileListView, AboutProfile, AboutProfileUpdateView,
 )
 
 app_name = 'myauth'
@@ -23,6 +23,10 @@ urlpatterns = [
     path('cookie/get/', get_cookie_view, name='cookie_get'),
     path('cookie/set/', set_cookie_view, name='cookie_set'),
     path('about-me/', AboutMeView.as_view(), name='about-me'),
+    path('about-profile/<pk>', AboutProfile.as_view(), name='about_profile'),
+    path('about-profile/update/<pk>', AboutProfileUpdateView.as_view(), name='about_profile_update'),
+    path('about-me/update/<pk>', ProfileUpdateView.as_view(), name='about_me_update'),
+    path('profile-list/', ProfileListView.as_view(), name='profile_list'),
     path('register/', RegisterView.as_view(), name='register'),
     path('session/set/', set_session_view, name='session_set'),
     path('session/get/', get_session_view, name='session_get'),

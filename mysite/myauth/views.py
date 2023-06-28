@@ -1,19 +1,55 @@
+from typing import Any
+
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.auth.views import LogoutView
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.urls import reverse_lazy
 from django.views import View
-from django.views.generic import TemplateView, CreateView
+from django.views.generic import TemplateView, CreateView, UpdateView, FormView, DetailView, ListView
 
-
+from .forms import ProfileUpdateForm, AboutForm
 from .models import Profile
 
 
-class AboutMeView(TemplateView):
+class AboutMeView(FormView):
     template_name = 'myauth/about-me.html'
+    form_class = AboutForm
+
+
+class ProfileUpdateView(UserPassesTestMixin, UpdateView):
+    model = Profile
+    fields = ['avatar', 'bio']
+    success_url = reverse_lazy('myauth:about-me')
+    template_name_suffix = '_update_form'
+
+    def test_func(self):
+        return self.request.user.is_staff or self.request.user.profile == self.get_object()
+
+
+class AboutProfileUpdateView(UserPassesTestMixin, UpdateView):
+    model = Profile
+    fields = ['avatar', 'bio']
+    success_url = reverse_lazy('myauth:about_profile')
+    template_name = 'myauth/about_profile_update_form.html'
+
+    def test_func(self):
+        return self.request.user.is_staff or self.request.user.profile == self.get_object()
+
+
+class ProfileListView(ListView):
+    template_name = 'myauth/profile-list.html'
+    queryset = Profile.objects.all()
+    context_object_name = 'profiles'
+
+
+class AboutProfile(DetailView):
+    template_name = 'myauth/about-profile.html'
+    queryset = Profile.objects.all()
+    context_object_name = 'profile'
 
 
 class RegisterView(CreateView):

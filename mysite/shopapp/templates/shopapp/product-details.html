@@ -12,6 +12,22 @@
     <div>Discount: {{ product.discount }}</div>
     <div>Archived : {{ product.archived }}</div>
     <div>Created by : {{ product.created_by }}</div>
+    {%if product.preview %}
+      <img src="{{ product.preview.url }}" alt="{{ product.preview.name }}">
+    {% endif %}
+    <h3>Images:</h3>
+    <div>
+      {%for image in product.images.all  %}
+        <div>
+          <img src="{{ image.image.url }}" alt="{{ image.image.name }}">
+        </div>
+      <div>
+        {{ image.description }}
+      </div>
+      {% empty %}
+      <div>No images uploaded yet</div>
+      {% endfor %}
+    </div>
   </div>
   <div>
     <a href="{% url 'shopapp:product_update' pk=product.pk %}">Update product</a>
