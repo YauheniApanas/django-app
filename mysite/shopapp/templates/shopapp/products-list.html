@@ -1,18 +1,30 @@
 {% extends 'shopapp/base.html' %}
 
+{% load i18n %}
+
 {% block title %}
-    Products list
+    {% translate 'Products list' %}
+
 {% endblock %}
 
 {% block body %}
-    <h1>Products:</h1>
+    <h1>{% translate 'Products' %}:</h1>
     {%if products %}
-        {%for product in products %}
+        <div>
+            {% blocktranslate count counter=products|length %}
+            There is only one product.
+            {% plural %}
+            There are {{ counter }} products.
+            {% endblocktranslate %}
+        </div>
             <div>
+                {%for product in products %}
                 <ul>
-                    <li><a href="{% url 'shopapp:product_details' pk=product.pk %}">Name: {{ product.name }}</a></li>
-                    <li>Price: {{ product.price }}</li>
-                    <li>Discount: {% firstof product.discount 'No discount' %}</li>
+                    <li><a href="{% url 'shopapp:product_details' pk=product.pk %}">
+                        {% translate 'Name' context 'product name' %}: {{ product.name }}</a></li>
+                    <li>{% translate 'Price' %}: {{ product.price }}</li>
+                    {% translate 'no discount' as no_discount %}
+                    <li>{% translate 'Discount' %} : {% firstof product.discount no_discount %}</li>
                     {%if product.preview %}
                         <img src="{{ product.preview.url }}" alt="{{ product.preview.name }}">
                     {% endif %}
@@ -20,11 +32,14 @@
             </div>
         {% endfor %}
     {% else %}
-        <p>No products yet</p>
+        <p>{% translate 'No products yet' %}</p>
     {% endif %}
 <div>
     {%if perms.shopapp.add_product %}
-        <a href="{% url 'shopapp:products_create' %}">Create new product</a>
+        {% url 'shopapp:products_create' as create_product_url %}
+        {% blocktranslate %}
+            <a href="{{ create_product_url }}">Create a new one</a>
+        {% endblocktranslate %}
     {% endif %}
 </div>
 {% endblock %}

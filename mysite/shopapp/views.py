@@ -19,7 +19,8 @@ class ShopIndexView(View):
             ('watermelon', 15),
         ]
         context = {
-            'products': products
+            'products': products,
+            'items': 2,
         }
         return render(request, 'shopapp/shopapp-index.html', context=context)
 

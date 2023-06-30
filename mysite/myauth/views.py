@@ -13,6 +13,25 @@ from django.views.generic import TemplateView, CreateView, UpdateView, FormView,
 
 from .forms import ProfileUpdateForm, AboutForm
 from .models import Profile
+from django.utils.translation import gettext_lazy as _, ngettext_lazy
+
+
+class HelloView(View):
+    welcome_message = _('welcome hello world')
+
+    def get(self, request: HttpRequest) -> HttpResponse:
+        items_str = request.GET.get('items') or 0
+        items = int(items_str)
+        product_line = ngettext_lazy(
+            'one product',
+            '{count} products',
+            items,
+        )
+        product_line = product_line.format(count=items)
+        return HttpResponse(
+            f'<h1>{self.welcome_message}</h1>'
+            f'\n<h2>{product_line}</h2>'
+        )
 
 
 class AboutMeView(FormView):

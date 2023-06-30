@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 def product_preview_directory_path(instance: "Product", filename: str) -> str:
@@ -10,6 +11,10 @@ def product_preview_directory_path(instance: "Product", filename: str) -> str:
 
 
 class Product(models.Model):
+    class Meta:
+        verbose_name = _('Product')
+        verbose_name_plural = _('Products')
+
     name = models.CharField(max_length=100)
     description = models.TextField(null=False, blank=True)
     price = models.DecimalField(default=0, max_digits=8, decimal_places=2)
@@ -37,6 +42,10 @@ class ProductImage(models.Model):
 
 
 class Order(models.Model):
+    class Meta:
+        verbose_name = _('Order')
+        verbose_name_plural = _('Orders')
+
     delivery_address = models.TextField(null=False, blank=True)
     promocode = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)

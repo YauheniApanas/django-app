@@ -9,4 +9,7 @@
     <a href="{% url 'shopapp:products' %}">Products</a>
     <a href="{% url 'shopapp:orders' %}">Orders</a>
   </div>
+  <div>
+    <strong>You have {{ items }} cherr{{ items|pluralize:'y,ies' }}</strong>
+  </div>
 {% endblock %}
