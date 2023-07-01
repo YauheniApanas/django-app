@@ -6,9 +6,57 @@ from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
+from rest_framework.viewsets import ModelViewSet
+from rest_framework.filters import SearchFilter, OrderingFilter
+from django_filters.rest_framework import DjangoFilterBackend
 
 from shopapp.models import Product, Order, ProductImage
 from .forms import ProductForm, OrderForm, GroupForm
+from .serializers import ProductsSerializer, OrderSerializer
+
+
+class ProductViewSet(ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductsSerializer
+    filter_backends = [
+        SearchFilter,
+        OrderingFilter,
+    ]
+    search_fields = ['name', 'description']
+    # filterset_fields = [
+    #     'name',
+    #     'description',
+    #     'price',
+    #     'discount',
+    #     'archived',
+    # ]
+    ordering_fields = [
+        'name',
+        'price',
+        'discount',
+    ]
+
+
+class OrderViewSet(ModelViewSet):
+    queryset = Order.objects.select_related('user').prefetch_related('products').all()
+    serializer_class = OrderSerializer
+
+    filter_backends = [
+        DjangoFilterBackend,
+        OrderingFilter,
+    ]
+
+    filterset_fields = [
+        'delivery_address',
+        'promocode',
+        'user',
+    ]
+
+    ordering_fields = [
+        'delivery_address',
+        'promocode',
+        'user',
+    ]
 
 
 class ShopIndexView(View):
