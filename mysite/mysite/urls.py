@@ -23,6 +23,7 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, Spec
 
 urlpatterns = [
     path('req/', include('requestdataapp.urls')),
+    path('blog/', include('blogapp.urls')),
 ]
 
 urlpatterns += i18n_patterns(

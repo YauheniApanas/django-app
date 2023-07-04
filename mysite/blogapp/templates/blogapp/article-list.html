@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            Article list
+        {% endblock %}
+    </title>
+</head>
+<body>
+{% block body %}
+<h1>Article List</h1>
+{%if articles %}
+{%for article in articles  %}
+<p>Title: <b>{{ article.title }}</b></p>
+<p>Author: {{ article.author.name }}</p>
+<p>Publication date: {{ article.pub_date }}</p>
+<p>Category: {{ article.category.name }}</p>
+<p>Tags:</p>
+<ul>
+    {%for tag in article.tags.all  %}
+    <li>{{ tag.name }}</li>
+    {% endfor %}
+</ul>
+{% endfor %}
+{% endif %}
+{% endblock %}
+</body>
+</html>
