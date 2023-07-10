@@ -9,12 +9,20 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import logging
 from pathlib import Path
 
+import debug_toolbar.middleware
 import django.contrib.admindocs.middleware
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
+
+import sentry_sdk
+
+sentry_sdk.init(
+    dsn="https://69d5e30491284f619263c151f24f9305@o4505504352174080.ingest.sentry.io/4505504357220352",
+    traces_sample_rate=1.0,
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,9 +37,19 @@ SECRET_KEY = 'django-insecure-$)w#oz@yloxkw&0%lkmnz2&r2$oim*89=2%0h&q5zwm-fvh2wm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 
+INTERNAL_IPS = [
+    '127.0.0.1'
+]
 
+if DEBUG:
+    import socket
+    hostname, trash, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS.append('10.0.2.2')
+    INTERNAL_IPS.extend(
+        [ip[: ip.rfind('.')] + '.1' for ip in ips]
+    )
 # Application definition
 
 INSTALLED_APPS = [
@@ -45,7 +63,7 @@ INSTALLED_APPS = [
     'django_filters',
     'django.contrib.admindocs',
     'drf_spectacular',
-
+    'debug_toolbar',
 
     'shopapp.apps.ShopappConfig',
     'requestdataapp.apps.RequestdataappConfig',
@@ -62,9 +80,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'requestdataapp.middlewares.CountRequestsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.contrib.admindocs.middleware.XViewMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -159,25 +177,34 @@ LOGIN_REDIRECT_URL = reverse_lazy('myauth:about-me')
 
 LOGIN_URL = reverse_lazy('myauth:login')
 
+LOGFILE_NAME = BASE_DIR / 'log.txt'
+LOGFILE_SIZE = 1*1024*1024
+LOGFILE_COUNT = 3
+
 LOGGING = {
     'version': 1,
-    'filters': {
-      'require_debug_true': {
-          '()': 'django.utils.log.RequireDebugTrue',
+    'disable_existing_loggers': False,
+    'formatters': {
+      'verbose': {
+          'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s',
       },
     },
     'handlers': {
         'console': {
-            'level': 'DEBUG',
-            'filters': ['require_debug_true'],
             'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
         },
+        'logfile': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': LOGFILE_NAME,
+            'maxBytes': LOGFILE_SIZE,
+            'backupCount': LOGFILE_COUNT,
+            'formatter': 'verbose',
+        }
     },
-    'loggers': {
-        'django.db.backends': {
-            'level': 'DEBUG',
-            'handlers': ['console'],
-        },
+    'root': {
+        'handlers': ['console', 'logfile'],
+        'level': 'INFO',
     },
 }
 

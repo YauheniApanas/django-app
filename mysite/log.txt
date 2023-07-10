@@ -1,0 +1,105 @@
+2023-07-04 10:49:05,222 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-04 10:52:11,208 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2023-07-04 10:52:12,147 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-04 10:58:51,962 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2023-07-04 10:58:52,867 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-10 09:10:22,569 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-10 09:12:02,196 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-10 09:12:03,696 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-10 09:12:04,804 [ERROR] django.request: Internal Server Error: /en/shop/products/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 215, in get
+    elem = products.data[0]
+AttributeError: 'QuerySet' object has no attribute 'data'
+2023-07-10 09:12:24,421 [ERROR] django.request: Internal Server Error: /en/shop/products/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 215, in get
+    elem = products_data[0]
+AttributeError: 'QuerySet' object has no attribute 'data'
+2023-07-10 09:12:24,463 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-10 09:12:25,388 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-10 09:12:48,183 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-10 09:12:50,199 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-10 09:13:16,558 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-10 09:13:17,729 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-10 09:13:19,040 [ERROR] django.request: Internal Server Error: /en/shop/products/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 216, in get
+    name = elem['nae']
+KeyError: 'nae'
+2023-07-10 09:20:42,559 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2023-07-10 09:20:43,531 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-10 09:20:56,403 [WARNING] django.request: Not Found: /favicon.ico
+2023-07-10 09:20:59,810 [ERROR] django.request: Internal Server Error: /en/shop/products/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 216, in get
+    name = elem['nae']
+KeyError: 'nae'
+2023-07-10 09:21:17,056 [ERROR] django.request: Internal Server Error: /en/shop/products/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 216, in get
+    name = elem['nae']
+KeyError: 'nae'
+2023-07-10 09:22:39,892 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-10 09:22:46,373 [WARNING] django.request: Not Found: /favicon.ico
+2023-07-10 09:22:49,074 [ERROR] django.request: Internal Server Error: /en/shop/products/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 216, in get
+    name = elem['nae']
+KeyError: 'nae'
+2023-07-10 09:24:16,276 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-10 09:24:18,827 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
