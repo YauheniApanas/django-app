@@ -31,3 +31,7 @@ class OrderForm(forms.ModelForm):
         queryset=Product.objects.filter(archived=False).all(),
         widget=forms.CheckboxSelectMultiple,
     )
+
+
+class CSVImportForm(forms.Form):
+    csv_file = forms.FileField()

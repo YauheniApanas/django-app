@@ -64,12 +64,14 @@ INSTALLED_APPS = [
     'django.contrib.admindocs',
     'drf_spectacular',
     'debug_toolbar',
+    'django.contrib.sitemaps',
 
     'shopapp.apps.ShopappConfig',
     'requestdataapp.apps.RequestdataappConfig',
     'myauth.apps.MyauthConfig',
     'myapiapp.apps.MyapiappConfig',
     'blogapp.apps.BlogappConfig',
+    'secondblogapp.apps.SecondblogappConfig',
 ]
 
 MIDDLEWARE = [
