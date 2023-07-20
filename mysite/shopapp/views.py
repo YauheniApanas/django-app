@@ -7,6 +7,7 @@ import logging
 from csv import DictWriter
 
 from django.contrib.auth.models import User, Group
+from django.contrib.syndication.views import Feed
 from django.core import serializers
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse
@@ -23,7 +24,7 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
 
 from shopapp.models import Product, Order, ProductImage
-from .common import save_csv_products
+from .common import save_csv_products, save_csv_orders
 from .forms import ProductForm, OrderForm, GroupForm
 from .serializers import ProductsSerializer, OrderSerializer
 from drf_spectacular.utils import extend_schema, OpenApiResponse
@@ -115,6 +116,38 @@ class OrderViewSet(ModelViewSet):
         'user',
     ]
 
+    @decorators.action(methods=['get'], detail=False)
+    def download_csv(self, request: Request):
+        response = HttpResponse(content_type='text/csv')
+        filename = 'orders-export-csv'
+        response['Content-Disposition'] = f'attachment; filename = {filename}'
+        queryset = self.filter_queryset(self.get_queryset())
+        fields = [
+            'delivery_address',
+            'promocode',
+            'products',
+            'user',
+        ]
+        queryset = queryset.only(*fields)
+        writer = DictWriter(response, fieldnames=fields)
+        writer.writeheader()
+
+        for order in queryset:
+            writer.writerow({
+                field: getattr(order, field)
+                for field in fields
+            })
+        return response
+
+    @decorators.action(methods=['post'], detail=False, parser_classes=[MultiPartParser])
+    def upload_csv(self, request: Request):
+        orders = save_csv_orders(
+            request.FILES['file'].file,
+            encoding=request.encoding,
+        )
+        serializer = self.get_serializer(orders, many=True)
+        return Response(serializer.data)
+
 
 class ShopIndexView(View):
     def get(self, request: HttpRequest) -> HttpResponse:
@@ -204,6 +237,24 @@ class ProductDeleteView(DeleteView):
         self.object.archived = True
         self.object.save()
         return HttpResponseRedirect(success_url)
+
+
+class LatestProductsFeed(Feed):
+    title = 'Products(latest)'
+    description = 'Updates on changes in products'
+    link = reverse_lazy('shopapp:products')
+
+    def items(self):
+        return (
+            Product.objects.filter(archived=False)
+            .order_by('-created_at')[:5]
+        )
+
+    def item_title(self, item: Product):
+        return item.name
+
+    def item_description(self, item: Product):
+        return item.description[:200]
 
 
 class OrdersListView(LoginRequiredMixin, ListView):

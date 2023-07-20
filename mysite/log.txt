@@ -290,3 +290,1376 @@ django.template.exceptions.TemplateDoesNotExist: secondblogapp/article_detail.ht
 2023-07-10 12:11:19,432 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2023-07-10 12:12:00,287 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
 2023-07-10 12:12:01,014 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 16:57:53,367 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 16:58:21,889 [INFO] shopapp.views: Rendering shop index
+2023-07-20 16:58:23,149 [WARNING] django.request: Not Found: /favicon.ico
+2023-07-20 17:01:18,655 [INFO] shopapp.views: Rendering shop index
+2023-07-20 17:05:19,278 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-20 17:05:21,009 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:07:43,340 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-20 17:07:44,873 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:10:21,932 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:10:22,760 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:10:59,795 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:13:23,280 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-20 17:13:24,032 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:25:00,276 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-07-20 17:25:01,973 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:38:07,399 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 140, in import_csv
+    save_csv_orders(
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py", line 31, in save_csv_orders
+    orders = [
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py", line 32, in <listcomp>
+    Order(**row)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 237, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'1'": "Order.user" must be a "User" instance.
+2023-07-20 17:39:53,364 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:39:54,542 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:40:36,886 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:40:37,887 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:41:04,848 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:41:06,926 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:42:30,855 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:42:32,115 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:43:07,258 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:43:08,524 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:43:52,128 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:43:54,110 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:46:03,605 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:46:05,845 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:48:30,294 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:48:32,419 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:49:32,243 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:49:33,508 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:50:24,346 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:50:25,541 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:50:32,473 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 140, in import_csv
+    save_csv_orders(
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py", line 35, in save_csv_orders
+    products.append(**row['products'])
+TypeError: list.append() argument after ** must be a mapping, not str
+2023-07-20 17:50:44,093 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:50:45,525 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:50:48,673 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 140, in import_csv
+    save_csv_orders(
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py", line 35, in save_csv_orders
+    products.append(*row['products'])
+TypeError: list.append() takes exactly one argument (5 given)
+2023-07-20 17:51:13,516 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:51:15,678 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:51:18,204 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 140, in import_csv
+    save_csv_orders(
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py", line 35, in save_csv_orders
+    products.append(**row['products'].split(' '))
+TypeError: list.append() argument after ** must be a mapping, not list
+2023-07-20 17:51:24,217 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:51:25,584 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 140, in import_csv
+    save_csv_orders(
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py", line 35, in save_csv_orders
+    products.append(*row['products'].split(' '))
+TypeError: list.append() argument after ** must be a mapping, not list
+2023-07-20 17:51:27,305 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:51:30,460 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 140, in import_csv
+    save_csv_orders(
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py", line 35, in save_csv_orders
+    products.append(*row['products'].split(' '))
+TypeError: list.append() takes exactly one argument (2 given)
+2023-07-20 17:52:10,881 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:52:12,407 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:56:28,756 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:56:30,781 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:56:39,381 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 140, in import_csv
+    save_csv_orders(
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py", line 36, in save_csv_orders
+    Product.objects.get(pk=row['products'].split())
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got ['11', '12'].
+2023-07-20 17:59:22,526 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:59:24,189 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:59:38,215 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 17:59:40,703 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 17:59:42,577 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 140, in import_csv
+    save_csv_orders(
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py", line 36, in save_csv_orders
+    products.append(*row['products'].split())
+TypeError: list.append() takes exactly one argument (2 given)
+2023-07-20 18:01:00,687 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 18:01:02,364 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:01:45,093 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 18:01:46,391 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:04:23,389 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 18:04:24,700 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:07:07,120 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 18:07:08,626 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:07:14,344 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 140, in import_csv
+    save_csv_orders(
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py", line 32, in save_csv_orders
+    order, created = Order.objects.create(
+TypeError: cannot unpack non-iterable Order object
+2023-07-20 18:07:36,107 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 18:07:37,556 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:07:39,413 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 669, in get_field
+    return self.fields_map[field_name]
+KeyError: 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 271, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 302, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 671, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Order has no field named 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 280, in lookup_field
+    value = attr(obj)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 122, in user_verbose
+    return obj.user.first_name or obj.user.username
+AttributeError: 'NoneType' object has no attribute 'first_name'
+2023-07-20 18:08:23,908 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 18:08:25,926 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:08:28,733 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 669, in get_field
+    return self.fields_map[field_name]
+KeyError: 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 271, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 302, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 671, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Order has no field named 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 280, in lookup_field
+    value = attr(obj)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 122, in user_verbose
+    return obj.user.first_name or obj.user.username
+AttributeError: 'NoneType' object has no attribute 'first_name'
+2023-07-20 18:08:32,838 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 669, in get_field
+    return self.fields_map[field_name]
+KeyError: 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 271, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 302, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 671, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Order has no field named 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 280, in lookup_field
+    value = attr(obj)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 122, in user_verbose
+    return obj.user.first_name or obj.user.username
+AttributeError: 'NoneType' object has no attribute 'first_name'
+2023-07-20 18:08:38,782 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 669, in get_field
+    return self.fields_map[field_name]
+KeyError: 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 271, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 302, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 671, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Order has no field named 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 280, in lookup_field
+    value = attr(obj)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 122, in user_verbose
+    return obj.user.first_name or obj.user.username
+AttributeError: 'NoneType' object has no attribute 'first_name'
+2023-07-20 18:08:50,031 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 18:08:51,002 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:08:55,368 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 669, in get_field
+    return self.fields_map[field_name]
+KeyError: 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 271, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 302, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 671, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Order has no field named 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 280, in lookup_field
+    value = attr(obj)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 122, in user_verbose
+    return obj.user.first_name or obj.user.username
+AttributeError: 'NoneType' object has no attribute 'first_name'
+2023-07-20 18:10:02,421 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 18:10:03,836 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:10:05,464 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 669, in get_field
+    return self.fields_map[field_name]
+KeyError: 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 271, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 302, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 671, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Order has no field named 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 280, in lookup_field
+    value = attr(obj)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 122, in user_verbose
+    return obj.user.first_name or obj.user.username
+AttributeError: 'NoneType' object has no attribute 'first_name'
+2023-07-20 18:11:05,653 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 18:11:07,966 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:11:10,742 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 669, in get_field
+    return self.fields_map[field_name]
+KeyError: 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 271, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 302, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 671, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Order has no field named 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 280, in lookup_field
+    value = attr(obj)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 122, in user_verbose
+    return obj.user.first_name or obj.user.username
+AttributeError: 'NoneType' object has no attribute 'first_name'
+2023-07-20 18:11:32,025 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 18:11:33,513 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:11:34,957 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 669, in get_field
+    return self.fields_map[field_name]
+KeyError: 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 271, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 302, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 671, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Order has no field named 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 280, in lookup_field
+    value = attr(obj)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 122, in user_verbose
+    return obj.user.first_name or obj.user.username
+AttributeError: 'NoneType' object has no attribute 'first_name'
+2023-07-20 18:12:10,960 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 669, in get_field
+    return self.fields_map[field_name]
+KeyError: 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 271, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 302, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 671, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Order has no field named 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 280, in lookup_field
+    value = attr(obj)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 122, in user_verbose
+    return obj.user.first_name or obj.user.username
+AttributeError: 'NoneType' object has no attribute 'first_name'
+2023-07-20 18:12:19,243 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 669, in get_field
+    return self.fields_map[field_name]
+KeyError: 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 271, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 302, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/options.py", line 671, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Order has no field named 'user_verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 280, in lookup_field
+    value = attr(obj)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 122, in user_verbose
+    return obj.user.first_name or obj.user.username
+AttributeError: 'NoneType' object has no attribute 'first_name'
+2023-07-20 18:13:10,021 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-07-20 18:13:11,873 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:13:32,825 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-07-20 18:13:34,306 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:14:47,986 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-07-20 18:14:49,956 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:17:05,457 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 18:17:07,601 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:17:22,552 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 18:17:26,402 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:17:28,064 [ERROR] django.request: Internal Server Error: /en/admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/admin.py", line 140, in import_csv
+    save_csv_orders(
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py", line 34, in save_csv_orders
+    order, created = Order.objects.create(
+TypeError: cannot unpack non-iterable Order object
+2023-07-20 18:17:53,413 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-07-20 18:17:54,907 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:19:40,400 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:21:18,479 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:45:15,010 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:45:31,757 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2023-07-20 18:45:32,652 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-20 18:46:09,779 [ERROR] django.request: Internal Server Error: /secondblog/articles/latest/feed/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: secondblogapp_article
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/syndication/views.py", line 40, in __call__
+    feedgen = self.get_feed(obj, request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/syndication/views.py", line 180, in get_feed
+    for item in self._get_dynamic_attr("items", obj):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 394, in __iter__
+    self._fetch_all()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1867, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/debug_toolbar/panels/sql/tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/debug_toolbar/panels/sql/tracking.py", line 167, in _record
+    return method(sql, params)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/__init__.py", line 596, in execute
+    return real_execute(self, sql, params)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: secondblogapp_article

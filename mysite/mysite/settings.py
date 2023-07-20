@@ -114,7 +114,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'newdb.sqlite3',
+        'NAME': BASE_DIR / 'dbdb.sqlite3',
     }
 }
 
