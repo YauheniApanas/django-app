@@ -1663,3 +1663,1190 @@ Traceback (most recent call last):
   File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
     return Database.Cursor.execute(self, query, params)
 django.db.utils.OperationalError: no such table: secondblogapp_article
+2023-07-27 11:15:15,935 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 11:15:31,805 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:15:32,986 [WARNING] django.request: Not Found: /favicon.ico
+2023-07-27 11:16:21,361 [ERROR] django.request: Internal Server Error: /secondblog/articles/latest/feed/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: secondblogapp_article
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/syndication/views.py", line 40, in __call__
+    feedgen = self.get_feed(obj, request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/syndication/views.py", line 180, in get_feed
+    for item in self._get_dynamic_attr("items", obj):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 394, in __iter__
+    self._fetch_all()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1867, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/debug_toolbar/panels/sql/tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/debug_toolbar/panels/sql/tracking.py", line 167, in _record
+    return method(sql, params)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/__init__.py", line 596, in execute
+    return real_execute(self, sql, params)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: secondblogapp_article
+2023-07-27 11:21:03,252 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-07-27 11:21:04,046 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 11:21:52,784 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-07-27 11:21:55,271 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 11:22:08,974 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-07-27 11:22:11,936 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 11:24:07,516 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+2023-07-27 11:24:08,655 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 11:24:19,736 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:24:54,557 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:25:29,416 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:28:36,600 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 11:28:39,159 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 11:30:19,292 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+2023-07-27 11:30:21,470 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 11:32:46,962 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 11:32:48,611 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 11:32:50,831 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:32:52,863 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:32:54,614 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:32:55,572 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:32:56,398 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:32:57,348 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:33:02,918 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:33:07,731 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:33:08,777 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:33:09,707 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:33:10,731 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:33:11,617 [INFO] shopapp.views: Rendering shop index
+2023-07-27 11:52:15,180 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 11:52:17,762 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 11:52:51,467 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 11:52:52,914 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 11:56:55,462 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2023-07-27 11:56:56,552 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 11:59:52,927 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 11:59:54,579 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:05:29,483 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:05:30,238 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:05:43,289 [WARNING] django.request: Not Found: /users/1/orders
+2023-07-27 12:06:04,659 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 175, in get
+    return self.render_to_response(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 199, in render_to_response
+    template=self.get_template_names(),
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 206, in get_template_names
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: UserOrdersListView requires either a 'template_name' attribute or a get_queryset() method that returns a QuerySet.
+2023-07-27 12:09:04,309 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:09:05,800 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:09:28,717 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:09:31,884 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:09:46,533 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:09:49,571 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:10:47,780 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:10:50,381 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:13:03,949 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:13:05,579 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:18:44,398 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:18:46,302 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:18:47,798 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 348, in get_queryset
+    user = User.objects.only(pk=user_id)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+TypeError: QuerySet.only() got an unexpected keyword argument 'pk'
+2023-07-27 12:20:57,143 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:20:59,360 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:21:21,775 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:21:23,906 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:21:38,539 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:21:41,645 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:21:42,786 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 350, in get_queryset
+    orders = Order.objects.filter(user=user)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 168, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 337, in get_prep_lookup
+    raise ValueError(
+ValueError: The QuerySet value for an exact lookup must be limited to one result using slicing.
+2023-07-27 12:21:46,349 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 350, in get_queryset
+    orders = Order.objects.filter(user=user)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 168, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 337, in get_prep_lookup
+    raise ValueError(
+ValueError: The QuerySet value for an exact lookup must be limited to one result using slicing.
+2023-07-27 12:22:00,685 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:22:01,673 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:22:05,743 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 350, in get_queryset
+    orders = Order.objects.filter(user=user).all()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 168, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 337, in get_prep_lookup
+    raise ValueError(
+ValueError: The QuerySet value for an exact lookup must be limited to one result using slicing.
+2023-07-27 12:22:08,012 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 350, in get_queryset
+    orders = Order.objects.filter(user=user).all()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 168, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 337, in get_prep_lookup
+    raise ValueError(
+ValueError: The QuerySet value for an exact lookup must be limited to one result using slicing.
+2023-07-27 12:22:56,979 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:22:59,164 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:23:00,186 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 350, in get_queryset
+    orders = Order.objects.filter(user=user).select_related('user').prefetch_related('products').all()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 168, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 337, in get_prep_lookup
+    raise ValueError(
+ValueError: The QuerySet value for an exact lookup must be limited to one result using slicing.
+2023-07-27 12:23:13,680 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:23:14,667 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 350, in get_queryset
+    orders = Order.objects.filter(user=user_id).select_related('user').prefetch_related('products').all()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 168, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 337, in get_prep_lookup
+    raise ValueError(
+ValueError: The QuerySet value for an exact lookup must be limited to one result using slicing.
+2023-07-27 12:23:17,450 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:26:40,997 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:26:42,640 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:28:01,498 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:28:02,816 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:29:12,868 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:29:14,097 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:29:15,252 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 57, in render
+    context = make_context(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/context.py", line 278, in make_context
+    raise TypeError(
+TypeError: context must be a dict rather than QuerySet.
+2023-07-27 12:29:58,340 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:30:00,945 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:30:02,120 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 57, in render
+    context = make_context(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/context.py", line 278, in make_context
+    raise TypeError(
+TypeError: context must be a dict rather than QuerySet.
+2023-07-27 12:30:09,242 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:30:09,885 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 57, in render
+    context = make_context(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/context.py", line 278, in make_context
+    raise TypeError(
+TypeError: context must be a dict rather than QuerySet.
+2023-07-27 12:30:12,661 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:34:17,779 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:34:19,727 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:34:21,097 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 57, in render
+    context = make_context(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/context.py", line 278, in make_context
+    raise TypeError(
+TypeError: context must be a dict rather than list.
+2023-07-27 12:35:15,896 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:35:18,359 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:35:19,437 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 57, in render
+    context = make_context(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/context.py", line 278, in make_context
+    raise TypeError(
+TypeError: context must be a dict rather than list.
+2023-07-27 12:35:34,507 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:35:36,991 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:35:38,521 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 356, in get_context_data
+    orders = {
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 356, in <setcomp>
+    orders = {
+TypeError: unhashable type: 'dict'
+2023-07-27 12:36:42,984 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:36:44,804 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:41:43,705 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:41:46,243 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:42:32,609 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:42:34,495 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:45:17,672 [WARNING] django.request: Not Found: /favicon.ico
+2023-07-27 12:47:19,069 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:47:20,250 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:48:41,269 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:48:42,237 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:51:54,116 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:51:55,852 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:51:57,062 [WARNING] django.request: Not Found: /favicon.ico
+2023-07-27 12:53:54,238 [WARNING] django.request: Not Found: /favicon.ico
+2023-07-27 12:58:13,390 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:58:14,931 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 12:59:21,046 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 12:59:22,620 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:01:22,798 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:01:24,537 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:01:50,942 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:01:52,824 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:01:54,344 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 193, in render
+    values = list(values)
+TypeError: 'ManyRelatedManager' object is not iterable
+2023-07-27 13:02:58,131 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:03:00,186 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:16:23,875 [WARNING] django.request: Not Found: /favicon.ico
+2023-07-27 13:18:25,663 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:18:27,427 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:20:07,175 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:20:08,395 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:20:09,825 [WARNING] django.request: Not Found: /en/shop/users/30/orders/
+2023-07-27 13:23:20,969 [ERROR] django.request: Internal Server Error: /en/shop/users/2/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'else'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/templatetags/cache.py", line 84, in do_cache
+    nodelist = parser.parse(("endcache",))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 24: 'else', expected 'endcache'. Did you forget to register or load this tag?
+2023-07-27 13:23:53,727 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/templatetags/cache.py", line 25, in render
+    expire_time = int(expire_time)
+ValueError: invalid literal for int() with base 10: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/templatetags/cache.py", line 27, in render
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: "cache" tag got a non-integer timeout value: ''
+2023-07-27 13:24:15,450 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/templatetags/cache.py", line 25, in render
+    expire_time = int(expire_time)
+ValueError: invalid literal for int() with base 10: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/templatetags/cache.py", line 27, in render
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: "cache" tag got a non-integer timeout value: ''
+2023-07-27 13:26:03,908 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:26:05,742 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:34:40,083 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:34:41,761 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:34:45,725 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: UserOrdersExportView.get() got an unexpected keyword argument 'user_id'
+2023-07-27 13:35:36,707 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:35:36,943 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: UserOrdersExportView.get() got an unexpected keyword argument 'user_id'
+2023-07-27 13:35:38,278 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:35:39,232 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: UserOrdersExportView.get() got an unexpected keyword argument 'user_id'
+2023-07-27 13:36:00,117 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:36:00,163 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: UserOrdersExportView.get() got an unexpected keyword argument 'user_id'
+2023-07-27 13:36:02,148 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:36:03,857 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view shopapp.views.view didn't return an HttpResponse object. It returned None instead.
+2023-07-27 13:36:25,265 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:36:26,877 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:36:27,934 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'promocode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 364, in get
+    print(serializer.data)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `promocode` on serializer `OrderSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'promocode'.
+2023-07-27 13:37:31,898 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:37:34,485 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:37:35,494 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view shopapp.views.view didn't return an HttpResponse object. It returned None instead.
+2023-07-27 13:39:54,464 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:39:56,066 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:39:57,583 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'promocode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 365, in get
+    return JsonResponse(serializer.data)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `promocode` on serializer `OrderSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'promocode'.
+2023-07-27 13:39:58,526 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'promocode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 365, in get
+    return JsonResponse(serializer.data)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `promocode` on serializer `OrderSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'promocode'.
+2023-07-27 13:45:04,566 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:45:06,522 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:45:08,568 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 366, in get
+    return JsonResponse(serializer.data)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/http/response.py", line 684, in __init__
+    raise TypeError(
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+2023-07-27 13:45:27,001 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:45:29,012 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:45:30,467 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 365, in get
+    serializer = OrderSerializer(orders, many=True, safe=False)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 122, in __new__
+    return cls.many_init(*args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 149, in many_init
+    child_serializer = cls(*args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'safe'
+2023-07-27 13:45:43,592 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:45:44,052 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 365, in get
+    serializer = OrderSerializer(orders, many=False)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 122, in __new__
+    return cls.many_init(*args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 149, in many_init
+    child_serializer = cls(*args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'safe'
+2023-07-27 13:45:46,636 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:45:47,909 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'promocode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 366, in get
+    return JsonResponse(serializer.data)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `promocode` on serializer `OrderSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'promocode'.
+2023-07-27 13:46:05,474 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:46:06,156 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'promocode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 366, in get
+    return JsonResponse(serializer.data)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `promocode` on serializer `OrderSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'promocode'.
+2023-07-27 13:46:08,490 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:46:10,725 [ERROR] django.request: Internal Server Error: /en/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py", line 366, in get
+    return JsonResponse(serializer.data)
+  File "/home/skillboxer/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/http/response.py", line 684, in __init__
+    raise TypeError(
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+2023-07-27 13:48:17,098 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:48:18,897 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:53:51,395 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:53:53,161 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-07-27 13:55:57,521 [INFO] django.utils.autoreload: /home/skillboxer/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-27 13:55:58,888 [INFO] django.utils.autoreload: Watching for file changes with StatReloader

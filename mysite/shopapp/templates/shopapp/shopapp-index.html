@@ -1,4 +1,5 @@
 {% extends 'shopapp/base.html' %}
+{% load cache %}
 {% block title %}
   Shop App
 {% endblock %}
@@ -12,4 +13,9 @@
   <div>
     <strong>You have {{ items }} cherr{{ items|pluralize:'y,ies' }}</strong>
   </div>
+  {% cache 20 lorem %}
+  <div>
+    {% lorem 3 p random %}
+  </div>
+  {% endcache %}
 {% endblock %}

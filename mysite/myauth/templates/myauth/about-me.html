@@ -1,12 +1,16 @@
 {% extends 'myauth/base.html' %}
-
+{% load cache %}
 {% block title %}
     About me
 {% endblock %}
 
 {% block body %}
 <h1>User info</h1>
+<div>
+    Products available: {% now 'u' %}
+</div>
 {%if user.is_authenticated %}
+    {% cache 20 userinfo user.username %}
     <h2>Detail</h2>
     <p>Username: {{ user.username }}</p>
     <p>First name: {{ user.first_name }}</p>
@@ -21,6 +25,7 @@
     <div>
         <a href="{% url 'myauth:about_me_update' pk=user.profile.pk %}">Update profile</a>
     </div>
+    {% endcache %}
 {% else %}
     <h2>User is anonymous</h2>
 {% endif %}
