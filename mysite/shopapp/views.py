@@ -362,7 +362,7 @@ class UserOrdersExportView(LoginRequiredMixin, View):
     def get(self, request: HttpRequest, **kwargs) -> JsonResponse:
         user_id = self.kwargs.get('user_id')
         user = get_object_or_404(User, pk=user_id)
-        cache_key = user_id
+        cache_key = f'user_{user_id}_orders_export'
         orders = cache.get(cache_key)
         if orders is None:
             orders = Order.objects.filter(user=user).select_related('user').\
